@@ -21,9 +21,7 @@ drop.post("pug") { request in
 
 drop.get("pug") { request in
     
-    let pug = Pug(imageURL: "image.png")
-    
-    return try! pug.makeJSON()
+    return try JSON(node: Pug.all())
 }
 
 drop.run()
