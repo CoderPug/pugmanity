@@ -64,6 +64,20 @@ drop.get { request in
         throw Abort.serverError
     }
     
+    return try drop.view.make("welcome", ["pugs": pugs.makeNode()])
+}
+
+drop.get("b") { request in
+    
+    var pugs = [Pug]()
+    
+    do {
+        pugs = try Pug.all()
+    }
+    catch {
+        throw Abort.serverError
+    }
+    
     return try drop.view.make("welcome2", ["pugs": pugs.makeNode()])
 }
 
