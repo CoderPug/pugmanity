@@ -4,6 +4,7 @@ import VaporMySQL
 
 let drop = Droplet()
 try drop.addProvider(VaporMySQL.Provider.self)
+drop.preparations.append(Pug.self)
 
 drop.post("pug") { request in
     
@@ -15,7 +16,7 @@ drop.post("pug") { request in
     
     try pug.save()
     
-    return imageURL
+    return pug
 }
 
 drop.get("pug") { request in
