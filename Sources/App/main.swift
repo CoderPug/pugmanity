@@ -8,11 +8,14 @@ drop.preparations.append(Pug.self)
 
 drop.post("pug") { request in
     
-    guard let imageURL = request.data["imageurl"]?.string else {
+    guard let title = request.data["title"]?.string,
+        let imageURL = request.data["imageurl"]?.string else {
         throw Abort.badRequest
     }
     
-    var pug = Pug(imageURL: imageURL)
+    let description = request.data["description"]?.string
+    
+    var pug = Pug(title: title, description: description, imageURL: imageURL)
     
     try pug.save()
     
@@ -21,9 +24,12 @@ drop.post("pug") { request in
 
 drop.put("pug", Int.self) { request, pugId in
     
-    guard let imageURL = request.data["imageurl"]?.string else {
-        throw Abort.badRequest
+    guard let title = request.data["title"]?.string,
+        let imageURL = request.data["imageurl"]?.string else {
+            throw Abort.badRequest
     }
+    
+    let description = request.data["description"]?.string
     
     var pug: Pug?
     
@@ -35,7 +41,7 @@ drop.put("pug", Int.self) { request, pugId in
     }
     
     if pug != nil {
-        pug?.update(imageURL: imageURL)
+        pug?.update(title: title, description: description, imageURL: imageURL)
         try pug?.save()
     }
     

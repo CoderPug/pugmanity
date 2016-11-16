@@ -12,27 +12,35 @@ import FluentMySQL
 final class Pug : Model {
     
     var id: Node?
+    var title: String
+    var description: String
     var imageURL: String
     
-    init(imageURL: String) {
+    init(title: String, description: String?, imageURL: String) {
         
+        self.title = title
+        self.description = description ?? ""
         self.imageURL = imageURL
     }
 
     init(node: Node, in context: Context) throws {
         id = try node.extract("id")
+        title = try node.extract("title")
+        description = try node.extract("description")
         imageURL = try node.extract("imageurl")
     }
     
     convenience init() {
         
-        self.init(imageURL: "")
+        self.init(title: "", description: nil, imageURL: "")
     }
     
     func makeNode(context: Context) throws -> Node {
         return try Node(node: [
                 "id": id,
-                "imageurl": imageURL
+                "title": title,
+                "description": description,
+            "imageurl": imageURL
             ])
     }
     
@@ -40,6 +48,8 @@ final class Pug : Model {
         
         try database.create("pugs") { pugs in
             pugs.id()
+            pugs.string("title")
+            pugs.string("description")
             pugs.string("imageurl")
         }
     }
@@ -49,8 +59,10 @@ final class Pug : Model {
         try database.delete("pugs")
     }
 
-    func update(imageURL: String) {
+    func update(title: String, description: String?, imageURL: String) {
     
+        self.title = title
+        self.description = description ?? ""
         self.imageURL = imageURL
     }
     

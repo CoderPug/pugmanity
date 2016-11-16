@@ -17,9 +17,9 @@
             <figure>
                 <a class="photostack-img"><img src="#(pug.imageurl)" alt="" /></a>
                 <figcaption>
-                    <h2 class="photostack-title">Speed Racer</h2>
+                    <h2 class="photostack-title">#(pug.title)</h2>
                     <div class="photostack-back">
-                        <p>Here he comes Here comes Speed Racer. He's a demon on wheels. Wouldn't you like to get away? Sometimes you want to go where everybody knows <span>the</span> your name. And they're always glad you came! </p>
+                        <p>#(pug.description)</p>
                     </div>
                 </figcaption>
             </figure>
