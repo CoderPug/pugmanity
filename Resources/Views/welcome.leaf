@@ -1,7 +1,9 @@
 #extend("base")
 
 #export("head") {
-	
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700,300" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/app.css">
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://cdn.rawgit.com/xremix/xGallerify/master/dist/jquery.xgallerify.min.js"></script>
 	
@@ -9,18 +11,19 @@
 
 #export("body") {
 
-  <div class="photos">
-		#loop(pugs, "pug") {
-    	<div class="photo">
-      	<img src="#(pug.imageurl)">
-      </div>
-		}
-  </div>
+    <div class="photos">
+        #loop(pugs, "pug") {
+        <div class="photo">
+            <img src="#(pug.imageurl)">
+        </div>
+        }
+    </div>
     
-	<script>
+    <script>
 	$('.photos').gallerify({
 		margin: 0,
 		mode: 'default'
 	});
 	</script>
+
 }

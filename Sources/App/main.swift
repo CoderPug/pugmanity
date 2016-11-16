@@ -58,7 +58,7 @@ drop.get { request in
         throw Abort.serverError
     }
     
-    return try drop.view.make("welcome", ["pugs": pugs.makeNode()])
+    return try drop.view.make("welcome2", ["pugs": pugs.makeNode()])
 }
 
 drop.run()
