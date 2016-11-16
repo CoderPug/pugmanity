@@ -1,2 +1,3 @@
-# pugmanity
-Vapor demo project.
+# Pugmanity
+
+A basic vapor project demo.
