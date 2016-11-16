@@ -1,0 +1,38 @@
+#extend("base")
+
+#export("head") {
+	
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/component.css" />
+    <script src="/js/modernizr.min.js"></script>
+
+}
+
+#export("body") {
+
+    <section id="photostack-3" class="photostack">
+        <div>
+            #loop(pugs, "pug") {
+            <figure>
+                <a class="photostack-img"><img src="#(pug.imageurl)" alt="" /></a>
+                <figcaption>
+                    <h2 class="photostack-title">#(pug.title)</h2>
+                    <div class="photostack-back">
+                        <p>#(pug.description)</p>
+                    </div>
+                </figcaption>
+            </figure>
+            }
+        </div>
+    </section>
+
+    <script src="/js/classie.js"></script>
+    <script src="/js/photostack.js"></script>
+    <script>
+        new Photostack(document.getElementById('photostack-3'), {
+                   callback: function(item) {}
+                   });
+    </script>
+
+}
