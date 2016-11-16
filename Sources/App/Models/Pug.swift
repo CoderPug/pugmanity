@@ -7,8 +7,9 @@
 //
 
 import Vapor
+import FluentMySQL
 
-final class Pug : JSONRepresentable {
+final class Pug : Model {
     
     var id: Node?
     var imageURL: String
@@ -18,11 +19,29 @@ final class Pug : JSONRepresentable {
         self.imageURL = imageURL
     }
 
-    func makeJSON() throws -> JSON {
-     
-        return JSON([
-            "id": id ?? "",
-            "imageurl": Node(imageURL)
+    init(node: Node, in context: Context) throws {
+        id = try node.extract("id")
+        imageURL = try node.extract("imageurl")
+    }
+    
+    func makeNode(context: Context) throws -> Node {
+        return try Node(node: [
+                "id": id,
+                "imageurl": imageURL
             ])
     }
+    
+    static func prepare(_ database: Database) throws {
+        
+        try database.create("pugs") { pugs in
+            pugs.id()
+            pugs.string("imageurl")
+        }
+    }
+    
+    static func revert(_ database: Database) throws {
+        
+        try database.delete("pugs")
+    }
+
 }

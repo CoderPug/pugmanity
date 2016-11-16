@@ -11,6 +11,10 @@ drop.post("pug") { request in
         throw Abort.badRequest
     }
     
+    var pug = Pug(imageURL: imageURL)
+    
+    try pug.save()
+    
     return imageURL
 }
 
