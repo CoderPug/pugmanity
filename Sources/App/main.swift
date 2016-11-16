@@ -24,4 +24,9 @@ drop.get("pug") { request in
     return try JSON(node: Pug.all())
 }
 
+drop.get { request in
+    
+    return try drop.view.make("welcome", [])
+}
+
 drop.run()
