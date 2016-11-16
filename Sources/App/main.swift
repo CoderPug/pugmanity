@@ -11,4 +11,11 @@ drop.post("pug") { request in
     return imageURL
 }
 
+drop.get("pug") { request in
+    
+    let pug = Pug(imageURL: "image.png")
+    
+    return try! pug.makeJSON()
+}
+
 drop.run()

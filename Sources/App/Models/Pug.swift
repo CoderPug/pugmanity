@@ -8,7 +8,7 @@
 
 import Vapor
 
-final class Pug {
+final class Pug : JSONRepresentable {
     
     var id: Node?
     var imageURL: String
@@ -17,5 +17,12 @@ final class Pug {
         
         self.imageURL = imageURL
     }
-    
+
+    func makeJSON() throws -> JSON {
+     
+        return JSON([
+            "id": id ?? "",
+            "imageurl": Node(imageURL)
+            ])
+    }
 }
