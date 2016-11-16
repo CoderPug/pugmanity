@@ -26,7 +26,7 @@ drop.get("pug") { request in
 
 drop.get { request in
     
-    return try drop.view.make("welcome", [])
+    return try drop.view.make("welcome2", [])
 }
 
 drop.run()

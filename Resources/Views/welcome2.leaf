@@ -1,0 +1,117 @@
+#extend("base")
+
+#export("head") {
+	
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/demo.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/component.css" />
+    <script src="/js/modernizr.min.js"></script>
+
+}
+
+#export("body") {
+
+<section id="photostack-3" class="photostack">
+    <div>
+        <figure>
+            <a class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug01.jpg" alt="img05" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Speed Racer</h2>
+                <div class="photostack-back">
+                    <p>Here he comes Here comes Speed Racer. He's a demon on wheels. Wouldn't you like to get away? Sometimes you want to go where everybody knows <span>the</span> your name. And they're always glad you came! </p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <a class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug02.jpg" alt="img02" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Happy Days</h2>
+                <div class="photostack-back">
+                    <p>These Happy Days are yours and mine Happy Days. It's a beautiful day in this neighborhood a beautiful day for a neighbor. Would you be mine?</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="http://goo.gl/Jmvr4u" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug03.jpg" alt="img03" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Beautywood</h2>
+                <div class="photostack-back">
+                    <p>It's a neighborly day in this beautywood a neighborly day for a beauty. Would you be mine? Could you be mine. Now the world don't move to the beat of just one drum.</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="http://goo.gl/Qw3ND4" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug04.jpg" alt="img01" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Serenity Beach</h2>
+                <div class="photostack-back">
+                    <p>I have never been to a place so serene in my entire life before. Swimming in clear waters opened my mind to nature and reminded me of my and <span>eveybody</span> everybody else's mortality.</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="http://goo.gl/49lN3k" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug05.jpg" alt="img04" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Heaven of time</h2>
+                <div class="photostack-back">
+                    <p>What might be right for you may not be right for some. And we know Flipper lives in a world full of wonder flying there-under under the sea.</p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="http://goo.gl/Ms7VDl" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug06.jpg" alt="img06" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Forever this</h2>
+                <div class="photostack-back">
+                    <p>Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Baby if you've ever wondered - wondered whatever became of me. </p>
+                </div>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="#()" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug07.jpg" alt="img07" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Lovely Green</h2>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="#()" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug08.jpg" alt="img08" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Wonderful</h2>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="#()" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug09.jpg" alt="img09" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Love Addict</h2>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="#()" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug10.jpg" alt="img10" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Friendship</h2>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="#()" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug11.jpg" alt="img10" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Friendship</h2>
+            </figcaption>
+        </figure>
+        <figure>
+            <a href="#()" class="photostack-img"><img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug12.jpg" alt="img10" /></a>
+            <figcaption>
+                <h2 class="photostack-title">Friendship</h2>
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<script src="js/classie.js"></script>
+<script src="js/photostack.js"></script>
+<script>
+    new Photostack(document.getElementById('photostack-3'), {
+                   callback: function(item) {}
+                   });
+</script>
+
+}
