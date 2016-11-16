@@ -24,6 +24,11 @@ final class Pug : Model {
         imageURL = try node.extract("imageurl")
     }
     
+    convenience init() {
+        
+        self.init(imageURL: "")
+    }
+    
     func makeNode(context: Context) throws -> Node {
         return try Node(node: [
                 "id": id,
@@ -44,4 +49,9 @@ final class Pug : Model {
         try database.delete("pugs")
     }
 
+    func update(imageURL: String) {
+    
+        self.imageURL = imageURL
+    }
+    
 }

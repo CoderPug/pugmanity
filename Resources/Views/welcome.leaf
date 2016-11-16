@@ -8,58 +8,15 @@
 }
 
 #export("body") {
-	
-	<div class="photos">
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug01.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug02.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug03.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug04.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug05.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug06.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug07.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug08.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug09.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug10.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug11.jpg">
-		<div class="title"></div>
-	</div>
-	<div class="photo">
-		<img src="https://s3-us-west-2.amazonaws.com/pugmanity/pug12.jpg">
-		<div class="title"></div>
-	</div>
-	</div>
 
+  <div class="photos">
+		#loop(pugs, "pug") {
+    	<div class="photo">
+      	<img src="#(pug.imageurl)">
+      </div>
+		}
+  </div>
+    
 	<script>
 	$('.photos').gallerify({
 		margin: 0,
