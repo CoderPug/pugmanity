@@ -1,0 +1,2 @@
+# pugmanity
+Vapor demo project.
