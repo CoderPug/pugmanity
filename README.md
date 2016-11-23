@@ -1,6 +1,6 @@
 # Pugmanity
 
-A simple vapor demo project used for this [meetup](https://www.meetup.com/Tech-Meetup-Santex-Cordoba-Argentina/events/235573588/) @SantexGroup in Córdoba, Argentina. Slides available [here](http://slides.com/josetorrescardenas/deck-6#/)
+A simple vapor demo project used for this [meetup](https://www.meetup.com/Tech-Meetup-Santex-Cordoba-Argentina/events/235573588/) @SantexGroup in Córdoba, Argentina. Slides available [here](https://speakerdeck.com/coderpug/server-side-development-with-swift) and [here](http://slides.com/josetorrescardenas/deck-6#/)
 
 ##About
 
